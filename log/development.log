@@ -4118,3 +4118,36 @@ Processing by AuthorsController#show as HTML
 Completed 200 OK in 33ms (Views: 23.0ms | ActiveRecord: 1.8ms)
 
 
+Started GET "/posts/new" for 76.175.102.219 at 2020-05-26 16:12:19 +0000
+Cannot render console from 76.175.102.219! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered posts/_form.html.erb (63.1ms)
+  Rendered posts/new.html.erb within layouts/application (66.3ms)
+Completed 200 OK in 880ms (Views: 852.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/new" for 76.175.102.219 at 2020-05-26 16:12:44 +0000
+Cannot render console from 76.175.102.219! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered posts/_form.html.erb (4.0ms)
+  Rendered posts/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 55ms (Views: 52.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/authors/4/posts/new" for 76.175.102.219 at 2020-05-26 16:12:51 +0000
+Cannot render console from 76.175.102.219! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[36mAuthor Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/_form.html.erb (17.4ms)
+  Rendered posts/new.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 107ms (Views: 82.5ms | ActiveRecord: 0.8ms)
+
+
